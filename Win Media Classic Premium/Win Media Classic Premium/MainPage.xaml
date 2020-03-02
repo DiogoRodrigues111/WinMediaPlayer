@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Win_Media_Classic_Premium.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Win_Media_Classic_Premium"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <MenuBar>
+            <MenuBarItem x:Name="menuItemBar" Title="FILE">
+                <MenuFlyoutItem Text="Open Archive" Click="Button_Set_File_Click"></MenuFlyoutItem>
+            </MenuBarItem>
+        </MenuBar>
+        <MediaElement x:Name="mediaElement" AutoPlay="False" AreTransportControlsEnabled="True" Loaded="OnLoaded" DragEnter="DragEnter" DragLeave="DragLeave" DragOver="DragOver" DragStarting="DragStarting" Drop="Drop" DropCompleted="DropCompleted" AllowDrop="True" RealTimePlayback="True" Stereo3DVideoRenderMode="Stereo" Grid.RowSpan="2" Margin="0,47,0,0"/>
+    </Grid>
+</Page>
